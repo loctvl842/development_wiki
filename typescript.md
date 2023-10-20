@@ -29,7 +29,7 @@ yarn tsc --init
 ```
 
 Sample config file:
-```json
+```jsonc
 {
   "compilerOptions": {
     "lib": ["es5", "es6"],
