@@ -4,20 +4,18 @@
 1. **Installation:**
 
 ```sh
-yarn add -D eslint
+yarn add eslint@8.50.0 \
+eslint-config-airbnb@19.0.4 \
+eslint-config-airbnb-base@15.0.0 \
+eslint-config-prettier@9.0.0 \
+eslint-import-resolver-typescript@3.6.1 \
+eslint-plugin-import@2.28.1 \
+eslint-plugin-prettier@5.0.0
 ```
 
-2. **Configuring:**
+2. **Configuration:**
 
-Just run the following command and follow the instructions:
-
-```sh
-yarn eslint --init @eslint/config
-```
-
-I used JSON config file for it.
-
-```json
+```.eslintrc.json
 {
   "env": {
     "browser": true,
@@ -262,135 +260,10 @@ I used JSON config file for it.
 }
 ```
 
-## Plugins
-
-### eslint-plugin-import
+## Typescript
 
 1. **Installation:**
-
 ```sh
-yarn add -D eslint-plugin-import
-```
-
-2. **Setup:**
-
-```jsonc
-{
-    # ... other config
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript" # If using typescript
-  ],
-  "plugins": [
-    "import"
-  ],
-  "rules": {
-    # ... other rules
-    "import/newline-after-import": [
-      "error",
-      {
-        "count": 1
-      }
-    ],
-    "import/prefer-default-export": "off",
-    "import/no-unresolved": "error",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "import/no-extraneous-dependencies": "off",
-  },
-  "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".tsx"
-      ]
-    },
-    "import/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
-        "project": "./tsconfig.json"
-      }
-    }
-  }
-}
-```
-
-## eslint-plugin-prettier
-
-1. **Installation:**
-
-```sh
-yarn add -D eslint-plugin-prettier
-```
-
-2. **Setup:**
-
-```jsonc
-{
-  # ... other config
-  "extends": [
-    "prettier"
-  ]
-  "plugins": [
-    "prettier"
-  ],
-}
-```
-
-## Typescript-eslint
-
-1. **Installation:**
-
-```sh
-yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint typescript
-```
-
-2. **Setup:**
-
-```jsonc
-{
-  # ... other config
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript"
-  ],
-  "plugins": [
-    # ... other plugins
-    "@typescript-eslint",
-  ],
-  "parser": "@typescript-eslint/parser",
-  "rules": {
-    # ... other rules
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
-      }
-    ],
-    "@typescript-eslint/type-annotation-spacing": [
-      "error",
-      {
-        "before": false,
-        "after": true,
-        "overrides": {
-          "arrow": {
-            "before": true,
-            "after": true
-          }
-        }
-      }
-    ]
-  },
-}
+yarn add @typescript-eslint/eslint-plugin@6.7.2 \
+@typescript-eslint/parser@6.7.2
 ```
