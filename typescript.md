@@ -40,9 +40,7 @@ Sample config file:
     "moduleResolution": "node",
     "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
     "paths": {
-      "@src/*": [
-        "src/*"
-      ] /* Have to config in package.json use with module-alias library */
+      "@src/*": ["src/*"] /* Have to config in package.json use with module-alias library */
     } /* Specify a set of entries that re-map imports to additional lookup locations. */,
     "sourceMap": true /* Create source map files for emitted JavaScript files. */,
     "outDir": "dist" /* Specify an output folder for all emitted files. */,
@@ -52,11 +50,12 @@ Sample config file:
     "strict": true /* Enable all strict type-checking options. */,
     "strictPropertyInitialization": false,
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types"]
   },
   "files": ["app.ts"],
   "include": ["src/**/*.ts", "app.ts"],
-  "exclude": ["node_modules", "dist", "__tests__"]
+  "exclude": ["node_modules", "dist", "__tests__", "generators"]
 }
 ```
 
