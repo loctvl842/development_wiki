@@ -1,4 +1,4 @@
-# Installation
+# 🚀 Installation
 
 ```sh
 sudo pacman -S docker docker-compose
@@ -14,7 +14,7 @@ Add current User to the Docker Group
 sudo usermod -aG docker $USER
 ```
 
-# Docker Commands, Help & Tips
+# 🐳 Docker Commands, Help & Tips
 
 ### Attach to a Running Container:
 If a container is already running, attach to it.
@@ -22,6 +22,8 @@ If a container is already running, attach to it.
 ```sh
 docker exec -it container_name_or_id /bin/bash
 ```
+
+## 🌐 Network
 
 ### Create a new network
 
@@ -38,6 +40,28 @@ Use field `external: true` for external networks. (Use when we want to connect D
 ```sh
 docker network connect network_name container_name
 ```
+
+## 📁 Volume
+
+### Inspecting a Docker Volume
+
+```sh
+docker volume inspect volume_name
+```
+
+### Removing Unused Docker Volumes
+
+```sh
+docker volume prune
+```
+
+### Finding Containers Using a Volume
+
+```sh
+docker ps --filter "volume=my_volume"
+```
+
+------------------
 
 ### List all container_id
 
