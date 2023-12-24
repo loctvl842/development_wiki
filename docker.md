@@ -101,3 +101,13 @@ environment:
 ```
 
 The value for **POSTGRES_HOST** will be "database" as specified in the environment section, and any other environment variables defined in the **.env** file will remain unchanged unless overridden in the environment section.
+
+## Install docker engine (Remote server)
+
+- Follow this: [Install docker engine](https://docs.docker.com/engine/install/ubuntu/)
+
+- Allow docker to run as root
+```sh
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
