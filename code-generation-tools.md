@@ -1,5 +1,32 @@
 # Unlocking Efficiency: The Top Code Generation Tools Revolutionizing Software Development
 
+## Table of Contents
+
+- [Introduction](#introduction)
+    - [Purpose of the Blog](#purpose-of-the-blog)
+    - [Definition of Code Generation Tools](#definition-of-code-generation-tools)
+    - [Brief Explanation of Code Generation Tools](#brief-explanation-of-code-generation-tools)
+    - [Types of Code Generation Tools](#types-of-code-generation-tools)
+- [Top Code Generation Tools](#top-code-generation-tools)
+    - [Template-based Code Generators](#template-based-code-generators)
+    - [Model-driven Code Generators](#model-driven-code-generators)
+    - [Language-specific Code Generators](#language-specific-code-generators)
+        - [NestJS](#nestjs)
+        - [LoopBack](#loopback)
+        - [Comparison of Code Generation Tools](#comparison-of-code-generation-tools)
+            - [Common Features](#common-features)
+            - [Community Support and Documentation](#community-support-and-documentation)
+            - [Integration Capabilities](#integration-capabilities)
+    - [AI-powered Code Generators](#ai-powered-code-generators)
+- [Conclusion](#conclusion)
+    - [Recap of Key Points](#recap-of-key-points)
+    - [Final Thoughts on the Importance of Code Generation](#final-thoughts-on-the-importance-of-code-generation)
+    - [Encouragement for Readers to Explore and Experiment](#encouragement-for-readers-to-explore-and-experiment)
+
+- [Additional Resources](#additional-resources)
+    - [NestJS Documentation](https://docs.nestjs.com/)
+    - [Loopback Documentation](https://loopback.io/doc/en/lb4/)
+
 ## Introduction
 
 ### Purpose of the Blog
@@ -73,31 +100,37 @@ If you are finding a free AI-powered code generator, check out [Codeium](https:/
 
 ## Top Code Generation Tools
 
-### NestJS
+### Template-based Code Generators
 
-#### Overview
+### Model-driven Code Generators
+
+### Language-specific Code Generators
+
+#### NestJS
+
+##### Overview
 
 [NestJS](https://docs.nestjs.com/) is a powerful, extensible NodeJS framework for building scalable and efficient server-side applications. It follows the modular and dependency injection (**DI**) principles, providing developers with a robust foundation to create well-structured and maintainable code.
 
-#### Key Features
+##### Key Features
 
 1. **Modular:** NestJS provides a modular architecture that allows developers to easily split and organize their code into separate modules and components.
 2. **Dependency Injection:** NestJS provides a DI system that allows developers to easily inject dependencies into their classes.
 3. **Middleware Support:** NestJS provides middleware support that allows developers to easily add middleware to their applications.
 4. **TypeScript Support:** NestJS provides TypeScript support that allows developers to easily use TypeScript in their applications.
 
-#### Use cases
+##### Use cases
 
 - **Enterprise-level Applications:** NestJS is well-suited for building large-scale enterprise-level applications that require high scalability and resilience.
 - **Real-time Systems:** With built-in WebSocket support and middleware integration, NestJS is an excellent choice for developing applications with real-time functionality. Explore more about this capability in this insightful [blog post](https://medium.com/@waqarilyas/building-real-time-applications-with-nest-js-and-websockets-2a7114dc4544).
 
-### Loopback
+#### Loopback
 
-#### Overview
+##### Overview
 
 [Loopback](https://loopback.io/doc/en/lb4/) is a highly extensible open-source Node.js framework built based on [ExpressJS](https://expressjs.com/) developed by [IBM](https://developer.ibm.com/components/loopback/). It enables you to quickly create APIs and microservices composed from backend systems such as databases and SOAP or REST services.
 
-#### Key Features
+##### Key Features
 
 1. **Object-Relational Mapping (ORM):** LoopBack includes built-in ORM features that simplify interactions between application objects and database data.
 
@@ -176,7 +209,7 @@ await productRepository.create(newProduct);
   };
   ```
 
-#### Use cases
+##### Use cases
 
 - **Rapid Prototyping:** LoopBack's low-code nature makes it ideal for quickly prototyping ideas and validating concepts with minimal development effort.
 
@@ -185,19 +218,17 @@ await productRepository.create(newProduct);
 
 ![Loopback Microservices Architecture](./assets/loopback-composition.png)
 
-## Comparison of Code Generation Tools
+#### Comparison of Code Generation Tools
 
-### Common Features
+##### Common Features
 
-### Performance Metrics
+##### Community Support and Documentation
 
-### Community Support and Documentation
+##### Integration Capabilities
 
-### Integration Capabilities
+### AI-based Code Generators
 
 ## Future Trends in Code Generation
-
-### Emerging Technologies
 
 ### Industry Trends
 
