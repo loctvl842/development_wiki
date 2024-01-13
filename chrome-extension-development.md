@@ -1,4 +1,4 @@
-# Chrome Extension Development
+# Developing a Chrome Extension for Enhanced Workflow Automation Interaction
 
 ## Setting Up Your Web Project
 
