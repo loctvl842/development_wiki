@@ -34,3 +34,18 @@ fvm releases
 ```sh
 fvm install stable
 ```
+
+## Usage
+
+### Install packages
+
+Add the target package to `pubspec.yaml` under `dependencies`.
+
+Read more [here](https://docs.flutter.dev/packages-and-plugins/using-packages)
+
+Then run:
+
+```sh
+fvm flutter pub get # If you are using FVM
+flutter pub get
+```

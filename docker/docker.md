@@ -41,6 +41,20 @@ Use field `external: true` for external networks. (Use when we want to connect D
 docker network connect network_name container_name
 ```
 
+### Enabling Host Network Access for PostgreSQL Container in Docker Compose Configuration
+
+Using `network_mode: "host"` in `docker-compose.yml` file to connect containers to the host network.
+
+```sh
+  postgres:
+    image: postgres
+    container_name: statistics-trading-postgres
+    restart: no
+    ports:
+      - "5432:5432"
+    network_mode: "host" # This will allow the container to connect to the host network (localhost)
+```
+
 ## 📁 Volume
 
 ### Inspecting a Docker Volume
