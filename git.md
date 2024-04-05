@@ -12,3 +12,11 @@ Once you've executed this command, you'll need to force-push the changes to upda
 ```sh
 git push --force
 ```
+
+## Stat changes in the working directory
+
+Show a brief summary of changes in the repository, including the files that were modified, added, or deleted, along with the number of lines changed in each file
+
+```sh
+git log --stat
+```
