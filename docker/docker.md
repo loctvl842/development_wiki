@@ -5,18 +5,39 @@ sudo pacman -S docker docker-compose
 ```
 
 Start/Enable docker
+
 ```sh
 sudo systemctl start/enable docker.service
 ```
 
 Add current User to the Docker Group
+
 ```sh
 sudo usermod -aG docker $USER
 ```
 
 # 🐳 Docker Commands, Help & Tips
 
+### Build an Image from a Dockerfile
+
+```sh
+docker build -t image_name .
+```
+
+### Run a Container from an Image
+
+```sh
+docker run -p 8080:80 --name container_name image_name
+```
+
+If you want to run the container in the background, add the `-d` flag.
+
+```sh
+docker run -d -p 8080:80 --name container_name image_name
+```
+
 ### Attach to a Running Container:
+
 If a container is already running, attach to it.
 
 ```sh
@@ -75,7 +96,7 @@ docker volume prune
 docker ps --filter "volume=my_volume"
 ```
 
-------------------
+---
 
 ### List all container_id
 
@@ -84,6 +105,7 @@ docker ps -a -q
 ```
 
 Stop all containers
+
 ```sh
 docker stop $(docker ps -a -q)
 ```
@@ -121,6 +143,7 @@ The value for **POSTGRES_HOST** will be "database" as specified in the environme
 - Follow this: [Install docker engine](https://docs.docker.com/engine/install/ubuntu/)
 
 - Allow docker to run as root
+
 ```sh
 sudo groupadd docker
 sudo usermod -aG docker $USER

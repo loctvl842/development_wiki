@@ -20,3 +20,12 @@ Show a brief summary of changes in the repository, including the files that were
 ```sh
 git log --stat
 ```
+
+## Skip tracking changes for file
+
+```sh
+git update-index --skip-worktree file_to_skip.ext
+```
+
+The command marks a file to be skipped in future operations, particularly useful for ignoring changes to tracked files.
+
