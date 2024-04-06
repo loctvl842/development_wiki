@@ -88,3 +88,55 @@ Generate the requirements.txt file for the specific environment:
 ```sh
 conda list --export -n myenv > requirements.txt
 ```
+
+### Lazy Load Conda
+
+To speed up the shell startup time, instead config `zshrc` or `bashrc` like below:
+
+```sh
+__conda_setup="$(\"${CONDA_DIR}/bin/conda\" 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+  eval "$__conda_setup"
+else
+  if [ -f "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
+    . "${CONDA_DIR}/etc/profile.d/conda.sh"
+  else
+    export PATH="${CONDA_DIR}/bin:$PATH"
+  fi
+fi
+unset __conda_setup
+```
+
+I lazily load the `Conda` environment by adding the following line to the `.zshrc` or `.bashrc` file:
+
+```sh
+# Lazy load Conda
+conda() {
+  __conda_setup="$('/home/loc/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+  else
+    if [ -f "/home/loc/miniconda3/etc/profile.d/conda.sh" ]; then
+      . "/home/loc/miniconda3/etc/profile.d/conda.sh"
+    else
+      export PATH="/home/loc/miniconda3/bin:$PATH"
+    fi
+  fi
+  unset __conda_setup
+    if command -v conda &> /dev/null; then
+        echo "Conda is already loaded."
+    else
+        __conda_setup="$('/home/loc/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+        if [ $? -eq 0 ]; then
+            eval "$__conda_setup"
+        else
+            if [ -f "/home/loc/miniconda3/etc/profile.d/conda.sh" ]; then
+                . "/home/loc/miniconda3/etc/profile.d/conda.sh"
+            else
+                export PATH="/home/loc/miniconda3/bin:$PATH"
+            fi
+        fi
+        unset __conda_setup
+    fi
+}
+```
