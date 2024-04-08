@@ -76,6 +76,10 @@ Using `network_mode: "host"` in `docker-compose.yml` file to connect containers 
     network_mode: "host" # This will allow the container to connect to the host network (localhost)
 ```
 
+**NOTE:**
+
+- Using `network_mode: "host"` will ignore the `ports` section, and the container will be able to connect to the host network directly.
+
 ## 📁 Volume
 
 ### Inspecting a Docker Volume
