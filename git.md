@@ -32,5 +32,10 @@ To undo this operation and start tracking changes to the file again, use the fol
 git update-index --no-skip-worktree file_to_skip.ext
 ```
 
+To list all files that are skipped, use the following command:
+```sh
+git ls-files -v | grep '^S'
+```
+
 The command marks a file to be skipped in future operations, particularly useful for ignoring changes to tracked files.
 
