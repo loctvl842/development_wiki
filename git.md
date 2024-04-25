@@ -27,5 +27,10 @@ git log --stat
 git update-index --skip-worktree file_to_skip.ext
 ```
 
+To undo this operation and start tracking changes to the file again, use the following command:
+```sh
+git update-index --no-skip-worktree file_to_skip.ext
+```
+
 The command marks a file to be skipped in future operations, particularly useful for ignoring changes to tracked files.
 
