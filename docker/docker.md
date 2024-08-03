@@ -41,6 +41,10 @@ docker run -d -p 8080:80 --name container_name image_name
 If a container is already running, attach to it.
 
 ```sh
+docker run --rm -it <image> /bin/sh
+```
+
+```sh
 docker exec -it container_name_or_id /bin/bash
 ```
 
