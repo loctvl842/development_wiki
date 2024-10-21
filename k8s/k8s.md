@@ -22,7 +22,7 @@ A cluster is a set of physical or virtual machines and other infrastructure reso
 
 5. **New IP address** on restart
 
-**Smallest** 
+**Smallest**
 
 ### Service
 
@@ -60,4 +60,40 @@ Reference this [link](https://kubernetes.io/docs/tasks/tools/install-kubectl-lin
 
 ```bash
 sudo pacman -S kubectl
+```
+
+## Playground
+
+### Commands:
+
+- List all Kubenetes contexts:
+
+```bash
+kubectl config get-contexts
+```
+
+Example output:
+
+```sh
+CURRENT   NAME                                        CLUSTER                                     AUTHINFO                                   NAMESPACE
+*         minikube                                    minikube                                    minikube
+          arn:aws:eks:us-west-2:123456789012:cluster/my-eks-cluster    arn:aws:eks:us-west-2:123456789012:cluster/my-eks-cluster    arn:aws:eks:us-west-2:123456789012:cluster/my-eks-cluster
+```
+
+- Switch context
+
+```sh
+kubectl config use-context <context-name>
+```
+
+Examples:
+
+```sh
+kubectl config use-context arn:aws:eks:us-west-2:123456789012:cluster/my-eks-cluster
+```
+
+- Verify Current Context
+
+```sh
+kubectl config current-context
 ```
